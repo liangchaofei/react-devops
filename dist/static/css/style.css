@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* --------------------------- 登录页面 BEGIN --------------------------- */
+.login {
+    min-width: 1200px; 
+    height: 100vh;
+    /* background-image: url('/static/img/background.png'); */
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.login .caption {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.login .frame {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 25%;
+    right: 10%;
+}
+
+.login .frame .form {
+    font-size: 28px;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 300px;
+}
+
+.login .frame .login-form-forgot {
+    float: right;
+}
+
+.login .frame .form .login-form-button {
+    width: 100%;
+}
+
+.login .footer {
+    width: 200px;
+    height: 25px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 9px;
+}
+/* --------------------------- 登录页面 END --------------------------- */
+
+
+
+/* --------------------------- 主页 BEGIN --------------------------- */
+#main .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, .2);
+    margin: 16px;
+}
+
+/* --------------------------- 主页 END --------------------------- */
