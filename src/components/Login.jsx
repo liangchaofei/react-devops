@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 import { Form, Icon, Input, Button, Checkbox, } from 'antd';
 import { login } from "../actions/actions.jsx";
+import { Redirect } from "react-router-dom";
 
 class Login extends React.Component {
   constructor({ dispatch }) {
@@ -19,13 +19,11 @@ class Login extends React.Component {
   }
 
   render() {
-    const { getFieldDecorator } = this.props.form;
-    console.log("当前登录？",this.props.state.login.Online)
-    // TODO 登录获得的令牌应该储存在浏览器的 sessionStorage 中
-    // TODO 登录组件内跳转到 home 组件，这个不复合组件用意，应该分离
+    console.log("当前登录？", this.props.state.login.Online)
     if (this.props.state.login.Online) {
       return <Redirect to={{ pathname: "/home" }} />
     }
+    const { getFieldDecorator } = this.props.form;
     return (
       <div className="login">
         <div className="caption">
