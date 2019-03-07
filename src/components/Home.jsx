@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import Hostlist from "./Hostlist.jsx";
+
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
@@ -35,6 +36,7 @@ class Home extends React.Component {
             <SubMenu title={<span><span>消费接口</span></span>}>
               <Menu.Item>Ansible</Menu.Item>
               <Menu.Item>Jenkins</Menu.Item>
+              <Menu.Item>流程系统</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
@@ -45,7 +47,9 @@ class Home extends React.Component {
               <Breadcrumb.Item>资产管理</Breadcrumb.Item>
               <Breadcrumb.Item>云主机</Breadcrumb.Item>
             </Breadcrumb>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>这里是正文</div>
+            <h1>当前登录状态:{this.props.state.login.Online}</h1>
+            <h1>当前 sessionStorage {sessionStorage.getItem("Authorization")}</h1>
+            <Hostlist></Hostlist>
           </Content>
           <Footer style={{ textAlign: 'center' }}> Ant Design ©2018 Created by Ant UED </Footer>
         </Layout>
